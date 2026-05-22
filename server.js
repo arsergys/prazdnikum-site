@@ -46,23 +46,23 @@ async function writeReviews(reviews) {
 }
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Главная', bodyClass: 'page-about' });
+    res.render('home', { title: 'Главная'});
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'О нас', bodyClass: 'page-about' });
+    res.render('about', { title: 'О нас'});
 });
 
 app.get('/services', (req, res) => {
-    res.render('services', { title: 'Услуги', bodyClass: 'page-about' });
+    res.render('services', { title: 'Услуги'});
 });
 
 app.get('/reviews', async (req, res) => {
     try {
         const reviews = await readReviews();
-        res.render('reviews', { title: 'Отзывы', reviews, bodyClass: 'page-about' });
+        res.render('reviews', { title: 'Отзывы', reviews});
     } catch (err) {
-        res.status(500).render('error', { message: 'Ошибка загрузки отзывов', title: 'Ошибка', bodyClass: 'page-about' });
+        res.status(500).render('error', { message: 'Ошибка загрузки отзывов', title: 'Ошибка'});
     }
 });
 
