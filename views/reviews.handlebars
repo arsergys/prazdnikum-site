@@ -1,0 +1,44 @@
+<section id="reviews">
+    <div class="container">
+        <h1>Отзывы клиентов</h1>
+        <div class="slider">
+            <div class="slide active">
+                <p>"Отличная организация! Наш корпоратив прошел на ура."</p>
+                <p class="author">- Анна, менеджер</p>
+            </div>
+            <div class="slide">
+                <p>"Свадьба была сказочной, спасибо команде!"</p>
+                <p class="author">- Иван и Мария</p>
+            </div>
+            <div class="slide">
+                <p>"День рождения ребенка удался, аниматоры супер."</p>
+                <p class="author">- Ольга, мама</p>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <h2>Оставьте отзыв</h2>
+        <form id="feedback-form" action="/reviews/add" method="POST">
+            <input type="text" id="name" name="name" placeholder="Ваше имя">
+            <input type="email" id="email" name="email" placeholder="Ваш email">
+            <input type="tel" id="phone" name="phone" placeholder="Ваш телефон">
+            <textarea id="message" name="message" placeholder="Ваш отзыв"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <hr class="divider">
+        <div class="comments-title">Отзывы наших клиентов</div>
+        <div id="comments">
+            {{#each reviews}}
+                <div class="comment">
+                    <p><strong>{{this.name}}</strong> ({{this.email}})</p>
+                    <p>{{this.message}}</p>
+                    <small>Телефон: {{this.phone}} | {{this.createdAt}}</small>
+                </div>
+            {{else}}
+                <p>Пока нет отзывов. Будьте первым!</p>
+            {{/each}}
+        </div>
+    </div>
+</section>

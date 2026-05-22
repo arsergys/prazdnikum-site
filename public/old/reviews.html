@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Организация праздников - Отзывы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="slider.js" defer></script>
+    <script src="form.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">Праздникум</a>
+        </div>
+        <nav>
+            <div class="menu-toggle">☰</div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="reviews">
+    <div class="container">
+        <h1>Отзывы клиентов</h1>
+        
+        <div class="slider">
+            <div class="slide active">
+                <p>"Отличная организация! Наш корпоратив прошел на ура."</p>
+                <p class="author">- Анна, менеджер</p>
+                <p>1</p>
+            </div>
+            <div class="slide">
+                <p>"Свадьба была сказочной, спасибо команде!"</p>
+                <p class="author">- Иван и Мария</p>
+                <p>2</p>
+            </div>
+            <div class="slide">
+                <p>"День рождения ребенка удался, аниматоры супер."</p>
+                <p class="author">- Ольга, мама</p>
+                <p>3</p>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        
+        <h2>Оставьте отзыв</h2>
+        <form id="feedback-form">
+            <input type="text" id="name" placeholder="Ваше имя">
+            <input type="email" id="email" placeholder="Ваш email">
+            <input type="tel" id="phone" placeholder="Ваш телефон">
+            <textarea id="message" placeholder="Ваш отзыв"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="errors"></div>
+        
+        <hr class="divider">
+        <div class="comments-title">Комментарии</div>
+        <div id="comments"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>ОАО Праздникум.ру</p>
+        <div>
+            <a href="#">ВКонтакте</a>
+            <a href="#">Telegram</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
